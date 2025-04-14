@@ -29,8 +29,8 @@ const Data = [
 ```
 Here,.. we can get data from backend and parse into like this,.. It has array of n numbers,.. based on numbers of data or Questions </b> 
 
-Further it has questions 
-```bash </>``` is the place where we are showing input box dynamically,.. </br>
+Further it has questions String where
+``` </>``` are placed where we are showing input box dynamically,.. </br>
 answer - Right Options at their places
 random - order in which options will be displayed
 
