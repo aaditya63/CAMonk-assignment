@@ -51,7 +51,7 @@ export default function QuestionCard({ Data: Data, no: no }) {
         setReady(true)
     }, [no])
     return (
-        <div className='w-[811px]'>
+        <div className='w-full md:w-[811px]'>
             <div>
                 {
                     PArray.map((text, key) => (
@@ -62,7 +62,7 @@ export default function QuestionCard({ Data: Data, no: no }) {
                     ))
                 }
             </div>
-            <div className='mt-40 flex gap-[16px] justify-center h-[40px]'>
+            <div className='mt-10 md:mt-40 flex flex-wrap gap-[16px] justify-center md:h-[40px]'>
                 {
                     random.map((text, key) => (
                         <div className={`cursor-pointer ${answers?.[no]?.["available"].includes(text) ? "":"invisible"} text-[16px] font-semibold h-[38px] rounded-xl border-2 px-[12px] border-[#BFC6C6] text-[#414343] flex items-center justify-center `} onClick={() => ChooseOption(text)} key={key}>{text}</div>

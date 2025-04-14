@@ -41,7 +41,7 @@ export default function Test() {
     
     return (
         <div className='min-h-screen bg-[#f8f8f8] flex justify-center items-center'>
-            <div className='bg-[#ffffff] rounded-xl h-[650px] w-[975px] p-[40px]'>
+            <div className='bg-[#ffffff] rounded-xl md:h-[650px] w-full lg:w-[975px] p-[40px]'>
                 <div className='flex justify-between'>
                     <div className='w-[36px] h-[26px] text-[#616464] font-semibold text-[24px]'>0:{countdown < 10 ? "0" : ""}{countdown}</div>
                     <div onClick={()=>navigate('/result')} className='cursor-pointer w-[76px] h-[44px] rounded-xl text-[18px] border-1 text-[#414343] border-black flex justify-center items-center'>Quite</div>
@@ -54,8 +54,8 @@ export default function Test() {
                         ))
                     }
                 </div>
-                <div className='h-[434px] w-full mt-14 flex flex-col items-center'>
-                    <p className='text-[#616464] text-[20px] font-semibold'>Select the missing words in the correct order</p>
+                <div className='md:h-[434px] w-full  mt-6 md:mt-14 flex flex-col items-center'>
+                    <p className='text-[#616464] text-[15px] md:text-[20px] font-semibold'>Select the missing words in the correct order</p>
                     <div className='w-full flex justify-center'>
                         <QuestionCard Data={AllData[no]} no={no} />
                     </div>

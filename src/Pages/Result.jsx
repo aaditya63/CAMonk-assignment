@@ -18,7 +18,7 @@ export default function Result() {
   const totalPromt = AllPromt.length;
   const navigate = useNavigate()
 
-  function gotoDashboard(){
+  function gotoDashboard() {
     navigate('/');
     window.location.reload();
   }
@@ -40,18 +40,18 @@ export default function Result() {
   }, [])
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="w-full gap-16 lg:h-[64px] lg:text-[28px] flex justify-around bg-[#F8F8F8] backdrop-blur-[50px] shadow-[0px_2px_36px_0px_#00000014]">
+      <div className="w-full gap-16 xxs:h-[40px] lg:h-[64px] lg:text-[28px] flex justify-around bg-[#F8F8F8] backdrop-blur-[50px] shadow-[0px_2px_36px_0px_#00000014]">
         <div className="lg:w-[136px]">
         </div>
         <div className="text-[#414343] flex justify-center items-center">
           <p>Sentence Construction</p>
         </div>
         <div className="lg:w-[136px] flex items-center justify-end">
-          <BsThreeDotsVertical className="text-[28px] cursor-pointer" />
+          <BsThreeDotsVertical className="md:text-[28px] cursor-pointer" />
         </div>
       </div>
       <div className="bg-[#f8f8f8f8] flex justify-center">
-        <div className='mt-32 w-[743px]'>
+        <div className='mt-5 md:mt-32 w-full md:w-[743px]'>
 
           <div className="relative w-[144px] mx-auto ">
             <CircularProgressbar
@@ -67,19 +67,19 @@ export default function Result() {
             </div>
           </div>
 
-          <p className='text-[18px] mt-[10px] text-[#2A2D2D] text-center'>While you correctly formed several sentences, there are a couple of areas where improvement is needed. Pay close attention to sentence structure and word placement to ensure clarity and correctness. Review your responses below for more details.</p>
+          <p className='text-[16px] px-5 md:px-0 md:text-[18px] mt-[10px] text-[#2A2D2D] text-center'>While you correctly formed several sentences, there are a couple of areas where improvement is needed. Pay close attention to sentence structure and word placement to ensure clarity and correctness. Review your responses below for more details.</p>
 
-          <div onClick={()=>gotoDashboard()} className=' cursor-pointer h-[54px] w-[270px] mx-auto mt-[90px] rounded-2xl text-[16px] text-[#453FE1] flex items-center justify-center border-1 border-[#453FE1]'>Go to Dashboard</div>
+          <div onClick={() => gotoDashboard()} className=' cursor-pointer h-[54px] w-[270px] mx-auto mt-[40px] md:mt-[90px] rounded-2xl text-[16px] text-[#453FE1] flex items-center justify-center border-1 border-[#453FE1]'>Go to Dashboard</div>
           <div className='h-[56px] w-fit mx-auto'>
-            <img src={ScrollDown} alt="" className='mt-[16px]' />
+            <img src={ScrollDown} alt="" className='mt-[6px] md:mt-[16px]' />
           </div>
-          <div className='px-[5px] w-[700px]'>
-              {
-                AllPromt.map((promt,key)=>{
-                  return(
+          <div className='px-[5px] w-full md:w-[700px]'>
+            {
+              AllPromt.map((promt, key) => {
+                return (
                   <PromtCard promt={promt} no={key} totalPromt={totalPromt} key={key} />)
-                })
-              }
+              })
+            }
           </div>
         </div>
       </div>
