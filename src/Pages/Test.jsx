@@ -19,6 +19,7 @@ export default function Test() {
         if(no+1 == TotalQuestion){
             navigate('/result');
         }
+        setCountdown(30);         
         setNo(no+1);
     }
     
@@ -43,7 +44,7 @@ export default function Test() {
             <div className='bg-[#ffffff] rounded-xl h-[650px] w-[975px] p-[40px]'>
                 <div className='flex justify-between'>
                     <div className='w-[36px] h-[26px] text-[#616464] font-semibold text-[24px]'>0:{countdown < 10 ? "0" : ""}{countdown}</div>
-                    <div className='w-[76px] h-[44px] rounded-xl text-[18px] border-1 text-[#414343] border-black flex justify-center items-center'>Quite</div>
+                    <div onClick={()=>navigate('/result')} className='cursor-pointer w-[76px] h-[44px] rounded-xl text-[18px] border-1 text-[#414343] border-black flex justify-center items-center'>Quite</div>
                 </div>
                 <div className='mt-[32px] flex justify-between'>
                     {

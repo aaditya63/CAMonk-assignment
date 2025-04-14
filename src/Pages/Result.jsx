@@ -18,6 +18,10 @@ export default function Result() {
   const totalPromt = AllPromt.length;
   const navigate = useNavigate()
 
+  function gotoDashboard(){
+    navigate('/');
+    window.location.reload();
+  }
 
   useEffect(() => {
     let total = 0;
@@ -65,7 +69,7 @@ export default function Result() {
 
           <p className='text-[18px] mt-[10px] text-[#2A2D2D] text-center'>While you correctly formed several sentences, there are a couple of areas where improvement is needed. Pay close attention to sentence structure and word placement to ensure clarity and correctness. Review your responses below for more details.</p>
 
-          <div onClick={()=>navigate('/')} className=' cursor-pointer h-[54px] w-[270px] mx-auto mt-[90px] rounded-2xl text-[16px] text-[#453FE1] flex items-center justify-center border-1 border-[#453FE1]'>Go to Dashboard</div>
+          <div onClick={()=>gotoDashboard()} className=' cursor-pointer h-[54px] w-[270px] mx-auto mt-[90px] rounded-2xl text-[16px] text-[#453FE1] flex items-center justify-center border-1 border-[#453FE1]'>Go to Dashboard</div>
           <div className='h-[56px] w-fit mx-auto'>
             <img src={ScrollDown} alt="" className='mt-[16px]' />
           </div>
